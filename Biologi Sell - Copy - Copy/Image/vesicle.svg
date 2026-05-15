@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="blur-vesi">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+    <image id="bgImage-vesi" xlink:href="FotoUm.webp" width="200" height="200" preserveAspectRatio="xMidYMid slice"/>
+    <pattern id="bgPattern-vesi" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <use xlink:href="#bgImage-vesi"/>
+    </pattern>
+    <mask id="roundMask-vesi">
+      <rect x="0" y="0" width="200" height="200" fill="white" rx="30" ry="30"/>
+    </mask>
+  </defs>
+  <!-- Background with rounded corners -->
+  <rect x="0" y="0" width="200" height="200" fill="url(#bgPattern-vesi)" rx="30" ry="30" mask="url(#roundMask-vesi)"/>
+  <!-- Vesicles/Transport vesicles -->
+  <!-- Large vesicle in center -->
+  <circle cx="100" cy="100" r="40" fill="#FF1493" stroke="#C71585" stroke-width="2" opacity="0.85"/>
+  <circle cx="100" cy="100" r="35" fill="#FF69B4" opacity="0.6"/>
+  
+  <!-- Smaller transport vesicles around it -->
+  <circle cx="60" cy="70" r="15" fill="#FF69B4" stroke="#FF1493" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="140" cy="75" r="15" fill="#FF69B4" stroke="#FF1493" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="55" cy="120" r="12" fill="#FF69B4" stroke="#FF1493" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="145" cy="130" r="12" fill="#FF69B4" stroke="#FF1493" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="75" cy="150" r="10" fill="#FF69B4" stroke="#FF1493" stroke-width="1.5" opacity="0.8"/>
+  <circle cx="125" cy="155" r="10" fill="#FF69B4" stroke="#FF1493" stroke-width="1.5" opacity="0.8"/>
+  
+  <!-- Arrows showing transport -->
+  <path d="M 75 85 L 95 95" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" opacity="0.6"/>
+  <path d="M 125 85 L 105 95" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" opacity="0.6"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#000" />
+    </marker>
+  </defs>
+</svg>

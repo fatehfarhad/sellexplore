@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="blur-golgi">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+    <image id="bgImage-golgi" xlink:href="FotoUm.webp" width="200" height="200" preserveAspectRatio="xMidYMid slice"/>
+    <pattern id="bgPattern-golgi" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <use xlink:href="#bgImage-golgi"/>
+    </pattern>
+    <mask id="roundMask-golgi">
+      <rect x="0" y="0" width="200" height="200" fill="white" rx="30" ry="30"/>
+    </mask>
+  </defs>
+  <!-- Background with rounded corners -->
+  <rect x="0" y="0" width="200" height="200" fill="url(#bgPattern-golgi)" rx="30" ry="30" mask="url(#roundMask-golgi)"/>
+  <!-- Stack of cisternae -->
+  <g id="golgi-stack" opacity="0.85">
+    <!-- Bottom cisterna -->
+    <ellipse cx="100" cy="140" rx="60" ry="20" fill="#FFD700" stroke="#DAA520" stroke-width="2"/>
+    <path d="M 40 140 Q 40 120, 100 115 Q 160 120, 160 140" fill="#FFF8DC" stroke="#DAA520" stroke-width="2"/>
+    
+    <!-- Middle cisterna -->
+    <ellipse cx="100" cy="105" rx="55" ry="18" fill="#FFD700" stroke="#DAA520" stroke-width="2"/>
+    <path d="M 45 105 Q 45 87, 100 83 Q 155 87, 155 105" fill="#FFF8DC" stroke="#DAA520" stroke-width="2"/>
+    
+    <!-- Top cisterna -->
+    <ellipse cx="100" cy="70" rx="50" ry="16" fill="#FFD700" stroke="#DAA520" stroke-width="2"/>
+    <path d="M 50 70 Q 50 54, 100 51 Q 150 54, 150 70" fill="#FFF8DC" stroke="#DAA520" stroke-width="2"/>
+    
+    <!-- Vesicles around Golgi -->
+    <circle cx="45" cy="50" r="8" fill="#FF69B4" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+    <circle cx="155" cy="60" r="8" fill="#FF69B4" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+    <circle cx="35" cy="110" r="8" fill="#FF69B4" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+    <circle cx="165" cy="120" r="8" fill="#FF69B4" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+  </g>
+</svg>

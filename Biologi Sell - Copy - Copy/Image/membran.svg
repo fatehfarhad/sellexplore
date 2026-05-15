@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="blur-membran">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+    <image id="bgImage-membran" xlink:href="FotoUm.webp" width="200" height="200" preserveAspectRatio="xMidYMid slice"/>
+    <pattern id="bgPattern-membran" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <use xlink:href="#bgImage-membran"/>
+    </pattern>
+    <mask id="roundMask-membran">
+      <rect x="0" y="0" width="200" height="200" fill="white" rx="30" ry="30"/>
+    </mask>
+  </defs>
+  <!-- Background with rounded corners -->
+  <rect x="0" y="0" width="200" height="200" fill="url(#bgPattern-membran)" rx="30" ry="30" mask="url(#roundMask-membran)"/>
+  <!-- Cell Membrane (Phospholipid bilayer) -->
+  <!-- Outer membrane curve -->
+  <path d="M 20 100 Q 20 50, 100 30 Q 180 50, 180 100" fill="#FFB6C1" stroke="#FF69B4" stroke-width="2" opacity="0.85"/>
+  <path d="M 20 100 Q 20 150, 100 170 Q 180 150, 180 100" fill="#FFB6C1" stroke="#FF69B4" stroke-width="2" opacity="0.85"/>
+  
+  <!-- Phospholipid head groups (circles) -->
+  <circle cx="35" cy="75" r="5" fill="#FF1493" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+  <circle cx="60" cy="45" r="5" fill="#FF1493" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+  <circle cx="100" cy="35" r="5" fill="#FF1493" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+  <circle cx="140" cy="45" r="5" fill="#FF1493" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+  <circle cx="165" cy="75" r="5" fill="#FF1493" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+  
+  <circle cx="35" cy="125" r="5" fill="#FF1493" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+  <circle cx="60" cy="155" r="5" fill="#FF1493" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+  <circle cx="100" cy="165" r="5" fill="#FF1493" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+  <circle cx="140" cy="155" r="5" fill="#FF1493" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+  <circle cx="165" cy="125" r="5" fill="#FF1493" stroke="#C71585" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Tails (lines) -->
+  <line x1="35" y1="75" x2="35" y2="120" stroke="#FFC0CB" stroke-width="2" opacity="0.7"/>
+  <line x1="60" y1="45" x2="60" y2="155" stroke="#FFC0CB" stroke-width="2" opacity="0.7"/>
+  <line x1="100" y1="35" x2="100" y2="165" stroke="#FFC0CB" stroke-width="2" opacity="0.7"/>
+  <line x1="140" y1="45" x2="140" y2="155" stroke="#FFC0CB" stroke-width="2" opacity="0.7"/>
+  <line x1="165" y1="75" x2="165" y2="120" stroke="#FFC0CB" stroke-width="2" opacity="0.7"/>
+  
+  <!-- Protein channel -->
+  <circle cx="100" cy="100" r="12" fill="#00BFFF" stroke="#4682B4" stroke-width="1.5" opacity="0.8"/>
+</svg>

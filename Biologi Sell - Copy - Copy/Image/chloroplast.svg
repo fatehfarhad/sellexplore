@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="blur-chloro">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+    <image id="bgImage-chloro" xlink:href="FotoUm.webp" width="200" height="200" preserveAspectRatio="xMidYMid slice"/>
+    <pattern id="bgPattern-chloro" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <use xlink:href="#bgImage-chloro"/>
+    </pattern>
+    <mask id="roundMask-chloro">
+      <rect x="0" y="0" width="200" height="200" fill="white" rx="30" ry="30"/>
+    </mask>
+  </defs>
+  <!-- Background with rounded corners -->
+  <rect x="0" y="0" width="200" height="200" fill="url(#bgPattern-chloro)" rx="30" ry="30" mask="url(#roundMask-chloro)"/>
+  <!-- Chloroplast outer membrane -->
+  <ellipse cx="100" cy="100" rx="80" ry="85" fill="#228B22" stroke="#004D00" stroke-width="2" opacity="0.8"/>
+  <!-- Inner membrane -->
+  <ellipse cx="100" cy="100" rx="70" ry="75" fill="#32CD32" opacity="0.75"/>
+  <!-- Thylakoids (stack of discs - grana) -->
+  <g id="grana" opacity="0.8">
+    <ellipse cx="70" cy="80" rx="15" ry="8" fill="#00FF00" stroke="#006400" stroke-width="1" opacity="0.8"/>
+    <ellipse cx="70" cy="88" rx="15" ry="8" fill="#00FF00" stroke="#006400" stroke-width="1" opacity="0.8"/>
+    <ellipse cx="70" cy="96" rx="15" ry="8" fill="#00FF00" stroke="#006400" stroke-width="1" opacity="0.8"/>
+    
+    <ellipse cx="130" cy="100" rx="15" ry="8" fill="#00FF00" stroke="#006400" stroke-width="1" opacity="0.8"/>
+    <ellipse cx="130" cy="108" rx="15" ry="8" fill="#00FF00" stroke="#006400" stroke-width="1" opacity="0.8"/>
+    <ellipse cx="130" cy="116" rx="15" ry="8" fill="#00FF00" stroke="#006400" stroke-width="1" opacity="0.8"/>
+  </g>
+  <!-- Stroma -->
+  <circle cx="100" cy="100" r="60" fill="#90EE90" opacity="0.3"/>
+</svg>

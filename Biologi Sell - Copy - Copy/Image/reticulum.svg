@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="blur-retic">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+    <image id="bgImage-retic" xlink:href="FotoUm.webp" width="200" height="200" preserveAspectRatio="xMidYMid slice"/>
+    <pattern id="bgPattern-retic" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <use xlink:href="#bgImage-retic"/>
+    </pattern>
+    <mask id="roundMask-retic">
+      <rect x="0" y="0" width="200" height="200" fill="white" rx="30" ry="30"/>
+    </mask>
+  </defs>
+  <!-- Background with rounded corners -->
+  <rect x="0" y="0" width="200" height="200" fill="url(#bgPattern-retic)" rx="30" ry="30" mask="url(#roundMask-retic)"/>
+  <!-- Endoplasmic Reticulum (rough ER with ribosomes) -->
+  <!-- Membrane tubules -->
+  <path d="M 30 80 Q 50 70, 80 75 Q 100 60, 130 75" fill="none" stroke="#DC143C" stroke-width="3" opacity="0.8"/>
+  <path d="M 35 110 Q 55 100, 85 105 Q 105 95, 135 110" fill="none" stroke="#DC143C" stroke-width="3" opacity="0.8"/>
+  <path d="M 40 140 Q 65 130, 100 135 Q 130 125, 160 140" fill="none" stroke="#DC143C" stroke-width="3" opacity="0.8"/>
+  
+  <!-- Connecting tubules -->
+  <path d="M 70 75 L 70 110" stroke="#DC143C" stroke-width="2" opacity="0.8"/>
+  <path d="M 100 60 L 100 135" stroke="#DC143C" stroke-width="2" opacity="0.8"/>
+  <path d="M 130 75 L 130 110" stroke="#DC143C" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Ribosomes attached to ER -->
+  <circle cx="50" cy="70" r="6" fill="#FFD700" stroke="#DAA520" stroke-width="1" opacity="0.8"/>
+  <circle cx="85" cy="75" r="6" fill="#FFD700" stroke="#DAA520" stroke-width="1" opacity="0.8"/>
+  <circle cx="130" cy="75" r="6" fill="#FFD700" stroke="#DAA520" stroke-width="1" opacity="0.8"/>
+  <circle cx="65" cy="110" r="6" fill="#FFD700" stroke="#DAA520" stroke-width="1" opacity="0.8"/>
+  <circle cx="115" cy="110" r="6" fill="#FFD700" stroke="#DAA520" stroke-width="1" opacity="0.8"/>
+</svg>

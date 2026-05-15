@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="blur-ribo">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+    <image id="bgImage-ribo" xlink:href="FotoUm.webp" width="200" height="200" preserveAspectRatio="xMidYMid slice"/>
+    <pattern id="bgPattern-ribo" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <use xlink:href="#bgImage-ribo"/>
+    </pattern>
+    <mask id="roundMask-ribo">
+      <rect x="0" y="0" width="200" height="200" fill="white" rx="30" ry="30"/>
+    </mask>
+  </defs>
+  <!-- Background with rounded corners -->
+  <rect x="0" y="0" width="200" height="200" fill="url(#bgPattern-ribo)" rx="30" ry="30" mask="url(#roundMask-ribo)"/>
+  <!-- Ribosome structure (60S and 40S subunits) -->
+  <!-- Large subunit (60S) -->
+  <ellipse cx="85" cy="100" rx="35" ry="50" fill="#FF8C00" stroke="#8B4513" stroke-width="2" opacity="0.85"/>
+  <text x="85" y="105" font-size="24" text-anchor="middle" fill="#FFF8DC" font-weight="bold" opacity="0.9">60S</text>
+  
+  <!-- Small subunit (40S) -->
+  <ellipse cx="115" cy="100" rx="30" ry="45" fill="#FF6347" stroke="#8B0000" stroke-width="2" opacity="0.85"/>
+  <text x="115" y="105" font-size="24" text-anchor="middle" fill="#FFF8DC" font-weight="bold" opacity="0.9">40S</text>
+  
+  <!-- mRNA thread -->
+  <path d="M 50 100 Q 85 120, 120 115" fill="none" stroke="#00CED1" stroke-width="2" opacity="0.8"/>
+  
+  <!-- Protein synthesis indicator -->
+  <circle cx="100" cy="140" r="8" fill="#FFD700" stroke="#DAA520" stroke-width="1" opacity="0.8"/>
+</svg>

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="blur-perox">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+    <image id="bgImage-perox" xlink:href="FotoUm.webp" width="200" height="200" preserveAspectRatio="xMidYMid slice"/>
+    <pattern id="bgPattern-perox" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <use xlink:href="#bgImage-perox"/>
+    </pattern>
+    <mask id="roundMask-perox">
+      <rect x="0" y="0" width="200" height="200" fill="white" rx="30" ry="30"/>
+    </mask>
+  </defs>
+  <!-- Background with rounded corners -->
+  <rect x="0" y="0" width="200" height="200" fill="url(#bgPattern-perox)" rx="30" ry="30" mask="url(#roundMask-perox)"/>
+  <!-- Peroxisome -->
+  <!-- Main body -->
+  <circle cx="100" cy="100" r="55" fill="#87CEEB" stroke="#4682B4" stroke-width="2" opacity="0.85"/>
+  <circle cx="100" cy="100" r="50" fill="#ADD8E6" opacity="0.7"/>
+  
+  <!-- Crystalloid core -->
+  <rect x="75" y="75" width="50" height="50" fill="#00BFFF" stroke="#4682B4" stroke-width="1.5" rx="3" opacity="0.8"/>
+  
+  <!-- Enzyme granules -->
+  <circle cx="85" cy="85" r="6" fill="#FFD700" stroke="#DAA520" stroke-width="1" opacity="0.8"/>
+  <circle cx="115" cy="90" r="6" fill="#FFD700" stroke="#DAA520" stroke-width="1" opacity="0.8"/>
+  <circle cx="90" cy="115" r="6" fill="#FFD700" stroke="#DAA520" stroke-width="1" opacity="0.8"/>
+  <circle cx="110" cy="120" r="6" fill="#FFD700" stroke="#DAA520" stroke-width="1" opacity="0.8"/>
+  
+  <!-- Hydrogen peroxide molecule indicator -->
+  <text x="100" y="105" font-size="28" text-anchor="middle" fill="#000" opacity="0.8">H₂O₂</text>
+</svg>

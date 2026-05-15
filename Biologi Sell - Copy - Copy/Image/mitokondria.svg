@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <filter id="blur-mito">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="1.5" />
+    </filter>
+    <image id="bgImage-mito" xlink:href="FotoUm.webp" width="200" height="200" preserveAspectRatio="xMidYMid slice"/>
+    <pattern id="bgPattern-mito" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+      <use xlink:href="#bgImage-mito"/>
+    </pattern>
+    <mask id="roundMask-mito">
+      <rect x="0" y="0" width="200" height="200" fill="white" rx="30" ry="30"/>
+    </mask>
+  </defs>
+  <!-- Background with rounded corners -->
+  <rect x="0" y="0" width="200" height="200" fill="url(#bgPattern-mito)" rx="30" ry="30" mask="url(#roundMask-mito)"/>
+  <!-- Outer Membrane -->
+  <ellipse cx="100" cy="100" rx="85" ry="90" fill="#FF6B6B" stroke="#C92A2A" stroke-width="3" opacity="0.8"/>
+  <!-- Inner Membrane (cristae pattern) -->
+  <path d="M 40 100 Q 60 70, 100 70 Q 140 70, 160 100" fill="none" stroke="#8B0000" stroke-width="2" opacity="0.9"/>
+  <path d="M 40 100 Q 60 130, 100 130 Q 140 130, 160 100" fill="none" stroke="#8B0000" stroke-width="2" opacity="0.9"/>
+  <path d="M 50 85 Q 70 80, 100 80 Q 130 80, 150 85" fill="none" stroke="#8B0000" stroke-width="2" opacity="0.9"/>
+  <path d="M 50 115 Q 70 120, 100 120 Q 130 120, 150 115" fill="none" stroke="#8B0000" stroke-width="2" opacity="0.9"/>
+  <!-- Matrix -->
+  <circle cx="100" cy="100" r="75" fill="#FFB3B3" opacity="0.4"/>
+  <!-- Energy indicator -->
+  <text x="100" y="110" font-size="40" text-anchor="middle" fill="#8B0000" font-weight="bold" opacity="0.9">⚡</text>
+</svg>
